@@ -12,7 +12,7 @@ const Footer = () => {
         <Wrapper>
             <Left>
                 <Images src={images} />
-                <Down>© 2023 Alajo,Inc.</Down>
+                <Down>© 2023 Alajo Inc.</Down>
             </Left>
             <Right>
                 <Start>
@@ -45,10 +45,18 @@ const Footer = () => {
                    <NavLink to="https://github.com/Dc-Valerian" style={{textDecoration:"none"}}>
                     <Navs><Icons><BsGithub /></Icons>GitHub</Navs>
                    </NavLink>
+                   <NavLink to="https://github.com/Dc-Valerian" style={{textDecoration:"none"}}>
                     <Navs><Icons><BsLinkedin /></Icons>LinkedIn</Navs>
-                    <Navs><Iconss><BsGithub /></Iconss>FaceBook</Navs>
-                    <Navs><Iconsss><BsYoutube /></Iconsss>YouTube</Navs>
+                   </NavLink>
+                   <NavLink to="https://github.com/Dc-Valerian" style={{textDecoration:"none"}}>
+                   <Navs><Iconss><BsGithub /></Iconss>FaceBook</Navs>
+                   </NavLink>
+                   <NavLink to="https://github.com/Dc-Valerian" style={{textDecoration:"none"}}>
+                   <Navs><Iconsss><BsYoutube /></Iconsss>YouTube</Navs>
+                   </NavLink>
+                   <NavLink to="https://github.com/Dc-Valerian" style={{textDecoration:"none"}}>
                     <Navs><Iconssss><BsTwitch /></Iconssss>Twitch</Navs>
+                   </NavLink>
                 </Start>
             </Right>
         </Wrapper>
