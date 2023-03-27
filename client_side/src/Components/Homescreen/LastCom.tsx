@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import phone from "../Assets/phone.png"
 
+
 const LastCom = () => {
   return (
     <div>
@@ -22,6 +23,9 @@ const LastCom = () => {
             <NavLink to="/register">
             <Button>Get started Now</Button>
             </NavLink>
+              <NavLink to="/register">
+                <Button>Get started Now</Button>
+              </NavLink>
             </Btn>
           </Right>
         </Wrapper>
@@ -109,7 +113,8 @@ const Button = styled.button`
     }
   
   
-`
+
+`;
 
 const Wrapper = styled.div`
   width: 95%;

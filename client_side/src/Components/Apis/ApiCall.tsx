@@ -1,7 +1,16 @@
-import React from "react";
+import axios from "axios";
+import { UserData } from "../Alllnterface";
 
-const ApiCall = () => {
-  return <div>ApiCall</div>;
+const localUrl = "http://localhost:1400";
+
+export const createUser = async ({ name, email, password }: any) => {
+  return await axios
+    .post(`${localUrl}/api/postuser`, {
+      name,
+      email,
+      password,
+    })
+    .then((res) => {
+      return res.data;
+    });
 };
-
-export default ApiCall;
