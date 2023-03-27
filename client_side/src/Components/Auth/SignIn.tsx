@@ -22,13 +22,8 @@ const SignIn = () => {
 
   // Setting up the schemas for our form using yup validator
   const Schema = yup.object({
-    name: yup.string().required(),
     email: yup.string().email().required(),
     password: yup.string().min(8).required(),
-    confirmPassword: yup
-      .string()
-      .oneOf([yup.ref("password")])
-      .required("Password do not match"),
   });
 
   type formData = yup.InferType<typeof Schema>;
@@ -52,7 +47,7 @@ const SignIn = () => {
   const Submit = handleSubmit(async (data: any) => {
     UsersSignUp.mutate(data);
     reset();
-    navigate("/signin");
+    navigate("/");
     //   Swal.fire({
     //     icon: "success",
     //     title: "User Sign Up Successful",
@@ -70,10 +65,6 @@ const SignIn = () => {
                 <Img src={logo} />
               </Image>
             </NavLink>
-
-            <Input {...register("name")} placeholder="Full Name" type="text" />
-            {<p>{errors?.name && errors?.name?.message}</p>}
-
             <Input {...register("email")} placeholder="Email" type="email" />
             <p>{errors?.email && errors?.email?.message}</p>
 

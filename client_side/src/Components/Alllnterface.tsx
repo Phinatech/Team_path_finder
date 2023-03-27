@@ -1,11 +1,8 @@
 export interface UserData {
   name: string;
   email: string;
-  userName: string;
+
   password: string;
-  phoneNumber: number;
-  _id: string;
-  wallet: [];
 }
 
 export interface WalletData {

@@ -1,4 +1,4 @@
-import myReduce from "./ReduxState";
+import ReduxState from "./ReduxState";
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,7 +20,7 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, myReduce);
+const persistedReducer = persistReducer(persistConfig, ReduxState);
 
 export const Store = configureStore({
   reducer: persistedReducer,

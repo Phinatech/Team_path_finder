@@ -27,10 +27,6 @@ const Signup = () => {
     name: yup.string().required(),
     email: yup.string().email().required(),
     password: yup.string().min(8).required(),
-    confirmPassword: yup
-      .string()
-      .oneOf([yup.ref("password")])
-      .required("Password do not match"),
   });
 
   type formData = yup.InferType<typeof Schema>;
@@ -54,7 +50,7 @@ const Signup = () => {
   const Submit = handleSubmit(async (data: any) => {
     UsersSignUp.mutate(data);
     reset();
-    navigate("/signin");
+    navigate("/");
     //   Swal.fire({
     //     icon: "success",
     //     title: "User Sign Up Successful",
@@ -86,7 +82,9 @@ const Signup = () => {
             />
             <p>{errors?.password && errors?.password?.message}</p>
 
-            <Button type="submit">Sign Up</Button>
+            <Button onClick={() => {}} type="submit">
+              Sign Up
+            </Button>
 
             <NavLink to="/signin" style={{ textDecoration: "none" }}>
               <Already>Already have an account? Sign in</Already>
