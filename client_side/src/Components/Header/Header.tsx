@@ -1,16 +1,13 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
-import logo from "../Assets/logo7.png"
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import logo from "../Assets/logo7.png";
 // import GlobalButton from "../GlobalProps/GlobalButton"
 import { BiMenuAltRight } from "react-icons/bi";
-
 
 const Header = () => {
   const [media, setmedia] = React.useState<boolean>(false);
   const [landingsearch, setlandsearch] = React.useState<boolean>(false);
-
-
 
   const hb = () => {
     setmedia(!media);
@@ -24,9 +21,9 @@ const Header = () => {
     <div>
       <Container>
         <Wrapper>
-        <NavLink to="/">
-        <Logo src={logo}/>
-        </NavLink>
+          <NavLink to="/">
+            <Logo src={logo} />
+          </NavLink>
 
           <NavWrapper>
             <Nav to="">Home</Nav>
@@ -35,89 +32,85 @@ const Header = () => {
           </NavWrapper>
 
           <Buttonwrapper>
-        <NavLink to="./login">
-            <Button>Login</Button>
-          </NavLink>  
-        <NavLink to="./register">
-            <Button>Sign Up</Button>
-          </NavLink>  
-           </Buttonwrapper>
+            <NavLink to="/signin">
+              <Button>Login</Button>
+            </NavLink>
+            <NavLink to="/signup">
+              <Button>Sign Up</Button>
+            </NavLink>
+          </Buttonwrapper>
         </Wrapper>
         {media ? (
-            <Span onClick={remove}>X</Span>
-          ) : (
-            <Menu onClick={hb}>
-              <BiMenuAltRight/>
-            </Menu>
-          )}
+          <Span onClick={remove}>X</Span>
+        ) : (
+          <Menu onClick={hb}>
+            <BiMenuAltRight />
+          </Menu>
+        )}
         {media ? (
-        <Handbuggermenu>
-          <Div>
-            <span>Home</span>
-            
-          </Div>
-       
-          <Div>
-            <span>Save</span>
-         
-          </Div>
-          <Div>
-            <span>Invest</span>
-          </Div>
-       
-          
-        </Handbuggermenu>
-      ) : null}
+          <Handbuggermenu>
+            <Div>
+              <span>Home</span>
+            </Div>
+
+            <Div>
+              <span>Save</span>
+            </Div>
+            <Div>
+              <span>Invest</span>
+            </Div>
+          </Handbuggermenu>
+        ) : null}
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 const Button = styled.button`
- width: 130px;
-    height: 40px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #063971;
-    margin-right: 20px;
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #063971;
+  margin-right: 20px;
 
-    :hover {
-      scale: 0.97;
-      cursor: pointer;
-      transition: all 350ms;
-      background-color: #063971;
-      border: 1px solid white;
-      color: #fff;
-    }
-@media screen and (max-width:500px) {
-  width:280px;
-  /* display: flex;
+  :hover {
+    scale: 0.97;
+    cursor: pointer;
+    transition: all 350ms;
+    background-color: #063971;
+    border: 1px solid white;
+    color: #fff;
+  }
+  @media screen and (max-width: 500px) {
+    width: 280px;
+    /* display: flex;
   align-items: center; */
-}
-@media screen and (max-width:768px) {
-  width:200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* display: flex;
+  }
+  @media screen and (max-width: 768px) {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: flex;
   align-items: center; */
-}
-`
+  }
+`;
 
 const Menu = styled.div`
   display: none;
   color: white;
   padding: 6px;
   /* background-color: white; */
-  font-size:30px;
+  font-size: 30px;
   justify-content: center;
   /* color: rgb(0, 0, 0, 0.5); */
   align-items: center;
   cursor: pointer;
-  
+
   @media screen and (max-width: 500px) {
     display: flex;
     font-size: 18px;
@@ -125,13 +118,11 @@ const Menu = styled.div`
     margin-right: 10px;
     color: white;
     font-size: 40px;
-
   }
-
-`
+`;
 
 const Span = styled.div`
-  color:white;
+  color: white;
   font-weight: 500;
   font-size: 17px;
   color: white;
@@ -144,7 +135,7 @@ const Span = styled.div`
   margin-right: 10px;
   padding: 6px;
   cursor: pointer;
-`
+`;
 
 const Button4 = styled.div`
   @media screen and (min-width: 300px) and (max-width: 500px) {
@@ -167,9 +158,7 @@ const Button4 = styled.div`
     height: 29px;
     width: 48%;
   }
-`
-
-
+`;
 
 const Div = styled.div`
   display: flex;
@@ -180,10 +169,10 @@ const Div = styled.div`
     margin-left: 15px;
     font-weight: 500;
     color: white;
-    :hover{
-    border-bottom: 1px solid #2A1854;
-    color: #2A1854;
-}
+    :hover {
+      border-bottom: 1px solid #2a1854;
+      color: #2a1854;
+    }
   }
 
   div {
@@ -194,7 +183,7 @@ const Div = styled.div`
     cursor: pointer;
     color: white;
   }
-`
+`;
 
 const Handbuggermenu = styled.div`
   position: absolute;
@@ -213,7 +202,7 @@ const Handbuggermenu = styled.div`
     display: block;
     height: 100vh;
   }
-`
+`;
 
 const Buttonwrapper = styled.div`
   display: flex;
@@ -227,72 +216,72 @@ const Buttonwrapper = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 const Nav = styled(NavLink)`
-text-decoration: none;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 30px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
   color: white;
   cursor: pointer;
-  :hover{
-    border-bottom: 1px solid #2A1854;
-    color: #2A1854;
-}
-@media screen and (max-width: 768px) {
-  /* display: none; */
-}
-`
+  :hover {
+    border-bottom: 1px solid #2a1854;
+    /* color: #2a1854; */
+    color: #fff;
+  }
+  @media screen and (max-width: 768px) {
+    /* display: none; */
+  }
+`;
 
 const NavWrapper = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-margin-left: 150px;
-@media screen and (max-width: 768px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 150px;
+  @media screen and (max-width: 768px) {
     display: flex;
   }
-@media screen and (max-width: 500px) {
+  @media screen and (max-width: 500px) {
     display: none;
   }
-`
+`;
 
 const Logo = styled.img`
-width:100px;
-object-fit: cover;
+  width: 100px;
+  object-fit: cover;
 
-
-@media screen and (max-width: 500px) {
-  margin-right: 140px;
-}
-`
-
+  @media screen and (max-width: 500px) {
+    margin-right: 140px;
+  }
+`;
 
 const Wrapper = styled.div`
-display: flex;
-align-items: center;
-width: 90%;
-height: 100%;
-justify-content: space-evenly;
-/* background-color: red; */
-position: relative;
-`
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  justify-content: space-evenly;
+  /* background-color: red; */
+  position: relative;
+`;
 
 const Container = styled.div`
-width: 100%;
-position: fixed;
-/* padding-top: 5px; */
-/* margin-top: 100px; */
-z-index: 999999;
-/* top: 0; */
-height:65px;
-background-color:#031e3b;
-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-display: flex;
-justify-content: space-evenly;
-/* border-bottom: 1px whitesmoke; */
-/* align-items: center; */
-`
+  width: 100%;
+  position: fixed;
+  /* padding-top: 5px; */
+  /* margin-top: 100px; */
+  z-index: 999999;
+  /* top: 0; */
+  height: 65px;
+  background-color: #031e3b;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  justify-content: space-evenly;
+  /* border-bottom: 1px whitesmoke; */
+  /* align-items: center; */
+`;
