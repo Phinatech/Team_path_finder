@@ -2,15 +2,18 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
 import Flex from "../SavingsDashboard/Flex";
-import Piggybank from "../SavingsDashboard/Piggybank";
 import Safelock from "../SavingsDashboard/Safelock";
-import SavingsDashboard from "../SavingsDashboard/SavingsDashboard";
 import Target from "../SavingsDashboard/Target";
+import UserFlex from "../UserSavingDash/UserFlex";
+import UserPiggybank from "../UserSavingDash/UserPiggybank";
+import UserSafelock from "../UserSavingDash/UserSafelock";
+import UserSavingsDashboard from "../UserSavingDash/UserSavingsDashboard";
+import UserTarget from "../UserSavingDash/UserTarget";
 
-const Admindashboard = () => {
+const UserDashBoard = () => {
   let element = useRoutes([
     {
-      path: "/dashboard",
+      path: "/",
       element: <Dashboard />,
     },
     {
@@ -18,23 +21,23 @@ const Admindashboard = () => {
       children: [
         {
           index: true,
-          element: <SavingsDashboard />,
+          element: <UserSavingsDashboard />,
         },
         {
           path: "/savings/piggybank",
-          element: <Piggybank />,
+          element: <UserPiggybank />,
         },
         {
           path: "/savings/flex",
-          element: <Flex />,
+          element: <UserFlex />,
         },
         {
           path: "/savings/safelock",
-          element: <Safelock />,
+          element: <UserSafelock />,
         },
         {
           path: "/savings/target",
-          element: <Target />,
+          element: <UserTarget />,
         },
       ],
     },
@@ -42,4 +45,4 @@ const Admindashboard = () => {
   return element;
 };
 
-export default Admindashboard;
+export default UserDashBoard;
