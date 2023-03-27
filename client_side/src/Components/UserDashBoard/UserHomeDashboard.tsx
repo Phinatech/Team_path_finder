@@ -4,7 +4,7 @@ import Allroutes from "../AllRoutes/AdminDashBoard";
 import Homes from "./Homes";
 import SideBar from "./UserSideBar";
 
-const Dashboard = () => {
+const UserHomeDashboard = () => {
   return (
     <Container>
       <SideBar />
@@ -13,7 +13,7 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default UserHomeDashboard;
 const Container = styled.div`
   display: flex;
 `;

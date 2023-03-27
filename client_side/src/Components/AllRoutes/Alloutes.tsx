@@ -9,7 +9,13 @@ import Admindashboard from "./AdminDashBoard";
 import UserDashBoard from "./UserDashBoard";
 import { useNavigate } from "react-router-dom";
 import { User } from "../Reduxfile/ReduxState";
-import PrivateRoutes from "../PrivateRouting/PrivateRouting";
+
+import UserTarget from "../UserSavingDash/UserTarget";
+import UserHomeDashboard from "../UserDashBoard/UserHomeDashboard";
+import UserSavingsDashboard from "../UserSavingDash/UserSavingsDashboard";
+import UserPiggybank from "../UserSavingDash/UserPiggybank";
+import UserFlex from "../UserSavingDash/UserFlex";
+import UserSafelock from "../UserSavingDash/UserSafelock";
 
 const Alloutes = () => {
   const user = useAppSelector((state) => state);
@@ -18,13 +24,13 @@ const Alloutes = () => {
 
   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    if (newUser.isAdmin) {
-      navigate("/dashboard", { replace: true });
-    } else {
-      navigate("/userdashboard", { replace: true });
-    }
-  }, []);
+  // React.useEffect(() => {
+  //   if (newUser.isAdmin) {
+  //     navigate("/dashboard", { replace: true });
+  //   } else {
+  //     navigate("/", { replace: true });
+  //   }
+  // }, []);
 
   let element = useRoutes([
     {
@@ -39,13 +45,47 @@ const Alloutes = () => {
       path: "/signin",
       element: <SignIn />,
     },
+    // {
+    //   path: "/dashing",
+    //   element: <Admindashboard />,
+    // },
+    // {
+    //   path: "/dashing",
+    //   element: (
+    //     // <PrivateRoutes>
+    //     <div>{newUser.isAdmin ? <Admindashboard /> : <UserDashBoard />}</div>
+    //     // </PrivateRoutes>
+    //   ),
+    // },
+
     {
-      path: "/start",
-      element: (
-        <PrivateRoutes>
-          <div>{newUser.isAdmin ? <Admindashboard /> : <UserDashBoard />}</div>
-        </PrivateRoutes>
-      ),
+      path: "/dashboard",
+      element: <UserHomeDashboard />,
+    },
+    {
+      path: "/savings",
+      children: [
+        {
+          index: true,
+          element: <UserSavingsDashboard />,
+        },
+        {
+          path: "/savings/piggybank",
+          element: <UserPiggybank />,
+        },
+        {
+          path: "/savings/flex",
+          element: <UserFlex />,
+        },
+        {
+          path: "/savings/safelock",
+          element: <UserSafelock />,
+        },
+        {
+          path: "/savings/target",
+          element: <UserTarget />,
+        },
+      ],
     },
   ]);
   return element;

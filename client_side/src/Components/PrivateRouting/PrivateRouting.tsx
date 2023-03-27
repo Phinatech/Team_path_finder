@@ -8,11 +8,12 @@ const PrivateRoutes = ({ children }: any) => {
 
   const user = useAppSelector((state) => state);
   const newUser = JSON.parse(JSON.stringify(user));
+  console.log("this is a new user", newUser);
 
-  if (newUser?.name) {
+  if (newUser) {
     return children;
   } else {
-    navigate("/", { replace: true });
+    navigate("/", { replace: false });
   }
 };
 
