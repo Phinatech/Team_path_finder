@@ -6,7 +6,7 @@ const initialState = {
   currentUser: {} as UserData | null,
 };
 
-const ReduxState = createSlice({
+const ReduxState: any = createSlice({
   name: "Alajo app",
   initialState,
   reducers: {
