@@ -55,7 +55,7 @@ export const LoginUser = async (req: Request, res: Response) => {
       });
     } else {
       return res.status(200).json({
-        message: `welcome back ${Admin}`,
+        message: `welcome back ${Admin.name}`,
         data: Admin,
       });
     }

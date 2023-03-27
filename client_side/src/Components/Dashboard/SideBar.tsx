@@ -198,7 +198,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #062863;
+  background-color: #671010;
   padding-left: 25px;
   position: fixed;
 `;

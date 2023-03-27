@@ -9,7 +9,7 @@ import { User } from "../Reduxfile/ReduxState";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
 import { useMutation } from "@tanstack/react-query";
-import { createUser } from "../Apis/ApiCall";
+import { loginUser } from "../Apis/ApiCall";
 
 import pic2 from "../Assets/img8.jpeg";
 import wave from "../Assets/wave2.svg";
@@ -38,7 +38,7 @@ const SignIn = () => {
   //   To sign up users:
   const UsersSignUp = useMutation({
     mutationKey: ["New Users"],
-    mutationFn: createUser,
+    mutationFn: loginUser,
     onSuccess: (data) => {
       dispatch(User(data.data));
     },
@@ -46,8 +46,9 @@ const SignIn = () => {
 
   const Submit = handleSubmit(async (data: any) => {
     UsersSignUp.mutate(data);
+    navigate("/dashing/userdashboard");
     reset();
-    navigate("/");
+
     //   Swal.fire({
     //     icon: "success",
     //     title: "User Sign Up Successful",

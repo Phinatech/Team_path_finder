@@ -13,7 +13,7 @@ import UserTarget from "../UserSavingDash/UserTarget";
 const UserDashBoard = () => {
   let element = useRoutes([
     {
-      path: "/userdashboard",
+      path: "/dashing/userdashboard",
       element: <Dashboard />,
     },
     {

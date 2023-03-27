@@ -14,3 +14,14 @@ export const createUser = async ({ name, email, password }: any) => {
       return res.data;
     });
 };
+
+export const loginUser = async ({ email, password }: any) => {
+  return await axios
+    .post(`${localUrl}/api/login`, {
+      email,
+      password,
+    })
+    .then((res) => {
+      return res.data;
+    });
+};
