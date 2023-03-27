@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Better from "./Better";
-import Build from "./Build";
+import Build from "./Building/Build";
 import Hero from "./Hero";
 import LastCom from "./LastCom";
 

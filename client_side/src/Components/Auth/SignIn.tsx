@@ -86,7 +86,7 @@ const SignIn = () => {
 
             <Button type="submit">Sign In</Button>
 
-            <NavLink to="/register" style={{ textDecoration: "none" }}>
+            <NavLink to="/signup" style={{ textDecoration: "none" }}>
               <Already>Already have an account? Sign in</Already>
             </NavLink>
           </Form>

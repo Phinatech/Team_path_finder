@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import images from "../../Assets/logo7.png";
+import images from "../Assets/logo7.png";
 
 import {
   BsTwitter,
