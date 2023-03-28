@@ -220,6 +220,7 @@ const Container = styled.div`
   @media screen and (max-width: 768px) {
     margin-top: 200px;
   }
-  /* margin-bottom: 10px; */
-  /* background-color: aliceblue; */
+
 `;
+
+
