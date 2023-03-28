@@ -10,7 +10,7 @@ import Todo from "./Todo";
 const Home = () => {
   const user = useAppSelector((state) => state.currentUser);
 
-  console.log(user);
+  // console.log(user);
 
   const fetchUser = useQuery({
     queryKey: ["user"],

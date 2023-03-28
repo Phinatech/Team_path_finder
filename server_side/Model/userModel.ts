@@ -1,57 +1,60 @@
-import mongoose from "mongoose"
-import { UserData } from "../AllInterface/Allinterface"
+import mongoose from "mongoose";
+import { UserData } from "../AllInterface/Allinterface";
 
-interface MainData extends UserData,mongoose.Document{}
+interface MainData extends UserData, mongoose.Document {}
 const UserSchema = new mongoose.Schema<UserData>({
-    name:{
-        type:String,
-        required:true,
-    }, 
-    amount:{
-        type:Number,
+  name: {
+    type: String,
+    required: true,
+  },
+  amount: {
+    type: Number,
+  },
+  accountNumber: {
+    type: Number,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+    // required:true,
+  },
+  verified: {
+    type: Boolean,
+    // required:true,
+  },
+  Message: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "messages",
     },
-    email:{
-        type:String,
-        required:true,
-        unique:true,
-        lowercase:true,
+  ],
+  wallet: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "wallet",
     },
-    password:{
-        type:String,
-        required:true,
+  ],
+  history: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "histories",
     },
-    isAdmin:{
-        type:Boolean,
-        default : false,
-        // required:true,
+  ],
+  backToSchool: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "backtoschools",
     },
-    verified:{
-        type:Boolean,
-        // required:true,
-    },
-    Message:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:"messages"
-        }
-    ],
-    wallet:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:"wallet"
-        }
-    ],
-    history:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:"histories"
-        }
-    ],
-    backToSchool:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:"backtoschools"
-        }
-    ],
-})
-export default mongoose.model<MainData>("user",UserSchema)
+  ],
+});
+export default mongoose.model<MainData>("user", UserSchema);

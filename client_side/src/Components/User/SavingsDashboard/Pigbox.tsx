@@ -34,7 +34,7 @@ const Pigbox = () => {
   const user = useAppSelector((state) => state.currentUser);
   const cash = useAppSelector((state) => state.wallet);
 
-  console.log("here oo", user);
+  // console.log("here oo", user);
 
   const fetchUser = useQuery({
     queryKey: ["user"],
@@ -45,14 +45,6 @@ const Pigbox = () => {
   const [show, setShow] = useState(false);
   const [cancle, setCancle] = useState(false);
 
-  // const Canc = () => {
-  //     setShow(false)
-  // }
-
-  // const Toggle =() => {
-  //     setShow(!show)
-  // }
-  //backtoschool
   const dispatch = UseAppDispach();
   const Schema = yup.object({
     amount: yup.string().required(),
@@ -60,6 +52,7 @@ const Pigbox = () => {
     number: yup.string().required(),
     cvv: yup.string().required(),
     pin: yup.string().required(),
+    accountNumber: yup.string().required(),
     expiry_year: yup.string().required(),
     expiry_month: yup.string().required(),
   });
@@ -74,28 +67,25 @@ const Pigbox = () => {
   } = useForm<formData>({ resolver: yupResolver(Schema) });
 
   //   To sign up users:
-  const School = useMutation({
-    mutationFn: (data) => {
-      return Deposit(user?._id, data);
-    },
-  });
-  console.log("lala", School);
+  const School = useMutation({});
+
   const onSubmit = handleSubmit(async (data) => {
     await axios
       .patch(`${localUrl}/api/pay/${user?._id}`, { data })
       .then((res) => {
-        Swal.fire({
-          title: "succeful",
-          icon: "success",
-        });
+        // Swal.fire({
+        //   title: "succeful",
+        //   icon: "success",
+        // });
       })
       .catch((err) => {
-        Swal.fire({
-          title: "an error occured",
-          icon: "error",
-          text: `${err.response?.data?.message}`,
-        });
-        console.log(err.response);
+        // Swal.fire({
+        //   title: "an error occured",
+        //   icon: "error",
+        //   text: `${err.response?.data?.message}`,
+        // });
+
+        console.log(data);
       });
   });
   return (
@@ -202,37 +192,34 @@ const Pigbox = () => {
               <p>Enter an amount and a destination to save to</p>
             </Quick>
             <Tap>
-              <p>Tap here & enter .. (e.g AMOUNT)</p>
-              <Input placeholder="Your Purpose" {...register("amount")} />
+              <p>Tap here & enter .. (e.g Amount)</p>
+              <Input placeholder="Amount" {...register("amount")} />
+            </Tap>
+            <Tap>
+              <p>Tap here & enter .. (e.g description)</p>
+              <Input placeholder="Description" {...register("description")} />
+            </Tap>
+            <Tap>
+              <p>Tap here & enter .. (e.g Number)</p>
+              <Input placeholder="Number" {...register("number")} />
+            </Tap>
+            <Tap>
+              <p>Tap here & enter .. (e.g CVV)</p>
+              <Input placeholder="CVV" {...register("cvv")} />
             </Tap>
             <Tap>
               <p>Tap here & enter .. (e.g AMOUNT)</p>
-              <Input placeholder="Your Purpose" {...register("description")} />
+              <Input placeholder="Pin" {...register("pin")} />
             </Tap>
             <Tap>
               <p>Tap here & enter .. (e.g AMOUNT)</p>
-              <Input placeholder="Your Purpose" {...register("number")} />
+              <Input placeholder="ExpireYear" {...register("expiry_year")} />
             </Tap>
             <Tap>
-              <p>Tap here & enter .. (e.g AMOUNT)</p>
-              <Input placeholder="Your Purpose" {...register("cvv")} />
+              <p>Tap here & enter .. (e.g expiry-month)</p>
+              <Input placeholder="ExpireMonth" {...register("expiry_month")} />
             </Tap>
-            <Tap>
-              <p>Tap here & enter .. (e.g AMOUNT)</p>
-              <Input placeholder="Your Purpose" {...register("pin")} />
-            </Tap>
-            <Tap>
-              <p>Tap here & enter .. (e.g AMOUNT)</p>
-              <Input placeholder="Your Purpose" {...register("expiry_year")} />
-            </Tap>
-            <Tap>
-              <p>Tap here & enter .. (e.g AMOUNT)</p>
-              <Input placeholder="Your Purpose" {...register("expiry_month")} />
-            </Tap>
-            {/* <Tap2>
-                            <p>Tap here & enter .. (e.g dESCRIPTION)</p>
-                            <Input2 placeholder='Your Target' {...register("target")}/>
-                        </Tap2> */}
+
             <Proceed type="submit">Proceed</Proceed>
           </Holder>
         </Save>
