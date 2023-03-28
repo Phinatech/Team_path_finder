@@ -62,20 +62,6 @@ const SideBar = () => {
           <Text2>Transaction</Text2>
         </NavLink>
       </Home2>
-
-      <Home2>
-        <Icon2>
-          <IoIosRocket />
-        </Icon2>
-        <Text3>History</Text3>
-      </Home2>
-      <Home2>
-        <Icon2>
-          <IoMdPerson />
-        </Icon2>
-        <Text4>Account</Text4>
-      </Home2>
-
       <Power
       // onClick={() => {
       //   dispatch(logout());
@@ -180,12 +166,15 @@ const Home = styled.div`
   margin-top: 70px;
 `;
 const Image = styled.img`
-  height: 25px;
+  height: 85px;
   margin-left: 30px;
+  cursor: pointer;
 `;
 const Icon = styled.div`
   color: #fff;
   font-size: 25px;
+  display: flex;
+  align-items: center;
 `;
 const Top = styled.div`
   display: flex;

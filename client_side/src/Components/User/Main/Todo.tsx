@@ -42,133 +42,14 @@ const Transaction = () => {
         </Middle2>
         <Middle3>
           <Navs style={{ fontSize: "14px", fontWeight: "300" }}>#0000</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
+          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "500" }}>
             <Img>j</Img>
             <Text>Judith Ugbo</Text>
           </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
+          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "500" }}>
             3000
           </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            20-31-2035
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>paid</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>3000</Navs>
-          <Navs style={{ fontSize: "14px" }}>4000</Navs>
-          <Navs style={{ fontSize: "14px" }}>...</Navs>
-        </Middle3>
-        <Middle3>
-          <Navs style={{ fontSize: "14px", fontWeight: "300" }}>#0000</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            <Img>j</Img>
-            <Text>Judith Ugbo</Text>
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            3000
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            20-31-2035
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>paid</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>3000</Navs>
-          <Navs style={{ fontSize: "14px" }}>4000</Navs>
-          <Navs style={{ fontSize: "14px" }}>...</Navs>
-        </Middle3>
-        <Middle3>
-          <Navs style={{ fontSize: "14px", fontWeight: "300" }}>#0000</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            <Img>j</Img>
-            <Text>Judith Ugbo</Text>
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            3000
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            20-31-2035
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>paid</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>3000</Navs>
-          <Navs style={{ fontSize: "14px" }}>4000</Navs>
-          <Navs style={{ fontSize: "14px" }}>...</Navs>
-        </Middle3>
-        <Middle3>
-          <Navs style={{ fontSize: "14px", fontWeight: "300" }}>#0000</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            <Img>j</Img>
-            <Text>Judith Ugbo</Text>
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            3000
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            20-31-2035
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>paid</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>3000</Navs>
-          <Navs style={{ fontSize: "14px" }}>4000</Navs>
-          <Navs style={{ fontSize: "14px" }}>...</Navs>
-        </Middle3>
-        <Middle3>
-          <Navs style={{ fontSize: "14px", fontWeight: "300" }}>#0000</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            <Img>j</Img>
-            <Text>Judith Ugbo</Text>
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            3000
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            20-31-2035
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>paid</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>3000</Navs>
-          <Navs style={{ fontSize: "14px" }}>4000</Navs>
-          <Navs style={{ fontSize: "14px" }}>...</Navs>
-        </Middle3>
-        <Middle3>
-          <Navs style={{ fontSize: "14px", fontWeight: "300" }}>#0000</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            <Img>j</Img>
-            <Text>Judith Ugbo</Text>
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            3000
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            20-31-2035
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>paid</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>3000</Navs>
-          <Navs style={{ fontSize: "14px" }}>4000</Navs>
-          <Navs style={{ fontSize: "14px" }}>...</Navs>
-        </Middle3>
-        <Middle3>
-          <Navs style={{ fontSize: "14px", fontWeight: "300" }}>#0000</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            <Img>j</Img>
-            <Text>Judith Ugbo</Text>
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            3000
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            20-31-2035
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>paid</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px" }}>3000</Navs>
-          <Navs style={{ fontSize: "14px" }}>4000</Navs>
-          <Navs style={{ fontSize: "14px" }}>...</Navs>
-        </Middle3>
-        <Middle3>
-          <Navs style={{ fontSize: "14px", fontWeight: "300" }}>#0000</Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            <Img>j</Img>
-            <Text>Judith Ugbo</Text>
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
-            3000
-          </Navs>
-          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "300" }}>
+          <Navs style={{ fontSize: "14px", margin: "0px", fontWeight: "500" }}>
             20-31-2035
           </Navs>
           <Navs style={{ fontSize: "14px", margin: "0px" }}>paid</Navs>
@@ -209,9 +90,9 @@ const Middle3 = styled.div`
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   :nth-child(even) {
-    background-color: lightgray;
+    background-color: #d3e5ec;
   }
 `;
 const Navs = styled.div`
@@ -220,6 +101,8 @@ const Navs = styled.div`
   font-weight: bold;
   font-size: 20px;
   display: flex;
+  height: 50px;
+  align-items: center;
 `;
 const Middle2 = styled.div`
   color: grey;
@@ -227,7 +110,7 @@ const Middle2 = styled.div`
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  padding: 10px;
+  padding: 20px;
   /* height: 40px; */
   align-items: center;
   margin-top: 20px;
@@ -258,7 +141,8 @@ const Mesg = styled.div``;
 const Icons = styled.div``;
 const All = styled.div`
   margin-right: 20px;
-  color: lightblue;
+  color: #123456;
+  font-weight: 600;
 `;
 const Top = styled.h1`
   color: grey;
@@ -283,7 +167,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   overflow-y: scroll;
   height: 400px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 100px;
 `;
 const Container = styled.div`

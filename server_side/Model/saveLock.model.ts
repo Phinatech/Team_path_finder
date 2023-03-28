@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import { IWalletData } from "./AllInterface/Allinterface"
+import { IWalletData } from "../AllInterface/Allinterface"
 
 interface MainData extends IWalletData,mongoose.Document{}
 const saveSchema= new mongoose.Schema<IWalletData>({

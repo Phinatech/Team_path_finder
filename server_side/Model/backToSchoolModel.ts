@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import { IBackToSchool } from "./AllInterface/Allinterface"
+import { IBackToSchool } from "../AllInterface/Allinterface"
 
 interface MainData extends IBackToSchool,mongoose.Document{}
 const walletSchema= new mongoose.Schema<IBackToSchool>({
@@ -19,4 +19,4 @@ const walletSchema= new mongoose.Schema<IBackToSchool>({
         type:String
     },
 })
-export default mongoose.model<MainData>("backtoschool",walletSchema)
+export default mongoose.model<MainData>("backtoschools",walletSchema)

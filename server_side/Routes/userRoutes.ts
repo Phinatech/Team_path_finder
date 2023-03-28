@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { RegisterUser,LoginUser,getallUser,getOneUser,backToSchool,UpdateBackToSchoolAccount,fundWalletFromBank,checkPayment,checkOutToBank} from "./Controller/userController";
+import { RegisterUser,LoginUser,getallUser,getOneUser,backToSchool,UpdateBackToSchoolAccount,fundWalletFromBank,checkPayment,checkOutToBank} from "../Controller/userController";
 
 const route = Router();
 
