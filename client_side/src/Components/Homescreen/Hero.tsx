@@ -1,40 +1,30 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import phone from "../Assets/hero.jpg";
-import { AiOutlineRight } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
     <div>
-      <Container>
+      <Container id="home">
         <Wrapper>
           <Right>
             <H3> Let's Start Alajo Savings Today!!</H3>
-            <H1>
-          A Smart Solution for Traditional Savings and Credit        
-            </H1>
-            {/* <P>
-            Alajo makes saving easier.Made for traders, merchants, fast-growing businesses <br /> and anyone looking for a smarter and better way to save.
-            </P> */}
-
+            <H1>A Smart Solution for Traditional Savings and Credit</H1>
             <Btn>
-          <NavLink to="/register">
-          <Button>
-            <button>Get started Now</button>
-            </Button>
-          </NavLink>
+              <NavLink to="/register">
+                <Button>
+                  <button>Get started Now</button>
+                </Button>
+              </NavLink>
 
               <Icons>
                 <Text>Learn More</Text>
-                {/* <Icon>
-                  <AiOutlineRight />
-                </Icon> */}
               </Icons>
             </Btn>
           </Right>
           <Left>
-            <Img src={phone}/>
+            <Img src={phone} />
           </Left>
         </Wrapper>
       </Container>
@@ -44,39 +34,31 @@ const Hero = () => {
 
 export default Hero;
 
-const Button = styled.div``
+const Button = styled.div``;
 
 const Text = styled.div`
-display: flex;
-align-items: center;
-cursor: pointer;
-width: fit-content;
-transition: all 500ms;
-background-image: linear-gradient(
-    transparent 0,
-    transparent 70%,
-    whitesmoke
-);
-background-position-x: left;
-background-repeat: no-repeat;
-background-size: 0 100%;
-:hover{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 500ms;
+  background-image: linear-gradient(transparent 0, transparent 70%, whitesmoke);
+  background-position-x: left;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  :hover {
     background-size: 100% 100%;
-}
+  }
 `;
-const Icon = styled.div`
-  margin-top: 3px;
-  margin-left: 5px;
-`;
+
 const Icons = styled.div`
   display: flex;
 `;
 const Right = styled.div`
   width: 50%;
-  /* margin-top: 30px; */
+
   padding: 20px;
   color: #fff;
-  /* background-color: red; */
 
   h3 {
     margin: 0;
@@ -92,13 +74,6 @@ const H1 = styled.div`
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 200;
-
-
-  /* span{
-    text-align: center;
-  margin-left: 80px;
-  } */
-
   @media screen and (max-width: 350px) {
     font-weight: 500;
     font-size: 30px;
@@ -109,26 +84,21 @@ const H3 = styled.div`
   margin-bottom: 20px;
 
   font-weight: 700;
-line-height: 74px;
-color:white;
-background-color: rgba(0,0,0,0);
-font-size: 70px;
-vertical-align: baseline;
-text-align: start;
-font-style: normal;
-`;
-
-const P = styled.div`
-  margin: 0;
-  margin-bottom: 10px;
+  line-height: 74px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 70px;
+  vertical-align: baseline;
+  text-align: start;
+  font-style: normal;
 `;
 
 const Img = styled.img`
   height: 100%;
-  width:100%;
+  width: 100%;
   object-fit: cover;
   border-radius: 30px;
-`
+`;
 
 const Left = styled.div`
   /* margin-top: 30px; */
@@ -139,13 +109,12 @@ const Left = styled.div`
   @media screen and (max-width: 770px) {
     width: 70%;
   }
- 
 `;
 
 const Btn = styled.div`
   margin-top: 20px;
   display: flex;
-  /* justify-content: center; */
+
   align-items: center;
 
   button {
@@ -181,11 +150,9 @@ const Wrapper = styled.div`
 `;
 const Container = styled.div`
   width: 100%;
-  height:700px;
+  height: 700px;
   display: flex;
-  /* justify-content: center; */
-  /* align-content: center; */
+
   background-color: #031e3b;
   border-bottom-right-radius: 300px;
-  /* margin-top: 20px; */
 `;

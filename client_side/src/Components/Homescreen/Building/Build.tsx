@@ -10,7 +10,7 @@ import flex from "../../Assets/flex.png";
 const Build = () => {
   return (
     <div>
-      <Container>
+      <Container id="build">
         <Wrapper>
           <First>
             <span>
