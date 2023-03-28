@@ -1,12 +1,21 @@
 export interface UserData {
   name: string;
   email: string;
-
   password: string;
+  _id: string;
+  wallet: [];
+  backToSchool: [];
 }
 
+export interface BackToSchool {
+  balance: number;
+  credit: number;
+  debit: number;
+  Target: number;
+  purpose: string;
+}
 export interface WalletData {
-  Balance: number;
+  balance: number;
   credit: number;
   debit: number;
   quickSave: {}[];
