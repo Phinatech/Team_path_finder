@@ -184,7 +184,7 @@ const Container = styled.div`
 
     @media screen and (max-width:500px) {
     margin-top: -30%;
-      background-color:aquamarine;
+      /* background-color:aquamarine; */
     }
     @media screen and (max-width:768px) {
       margin-top: 200px;

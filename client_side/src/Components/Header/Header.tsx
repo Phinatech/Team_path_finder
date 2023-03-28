@@ -27,8 +27,9 @@ const Header = () => {
 
           <NavWrapper>
             <Nav to="">Home</Nav>
-            <Nav to="">Save</Nav>
             <Nav to="">Invest</Nav>
+            <Nav to="">Save</Nav>
+            <Nav to="">Source</Nav>
           </NavWrapper>
 
           <Buttonwrapper>
@@ -54,10 +55,13 @@ const Header = () => {
             </Div>
 
             <Div>
+              <span>Invest</span>
+            </Div>
+            <Div>
               <span>Save</span>
             </Div>
             <Div>
-              <span>Invest</span>
+              <span>Source</span>
             </Div>
           </Handbuggermenu>
         ) : null}
@@ -227,9 +231,10 @@ const Nav = styled(NavLink)`
   color: white;
   cursor: pointer;
   :hover {
-    border-bottom: 1px solid #2a1854;
+    border-bottom: 1px solid #fff;
+    
     /* color: #2a1854; */
-    color: #fff;
+    /* color  : #2a1854; */
   }
   @media screen and (max-width: 768px) {
     /* display: none; */
