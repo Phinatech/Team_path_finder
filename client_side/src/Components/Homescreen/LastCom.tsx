@@ -1,8 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import phone from "../Assets/phone.png"
-
+import phone from "../Assets/phone.png";
 
 const LastCom = () => {
   return (
@@ -20,9 +19,6 @@ const LastCom = () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </P>
             <Btn>
-            <NavLink to="/register">
-            <Button>Get started Now</Button>
-            </NavLink>
               <NavLink to="/register">
                 <Button>Get started Now</Button>
               </NavLink>
@@ -94,26 +90,23 @@ const Btn = styled.div`
 `;
 
 const Button = styled.button`
-    width: 170px;
-    height: 40px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #063971;
-    margin-right: 20px;
+  width: 170px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #063971;
+  margin-right: 20px;
 
-    :hover {
-      scale: 0.97;
-      cursor: pointer;
-      transition: all 350ms;
-      background-color: #063971;
-      border: 1px solid white;
-      color: #fff;
-    }
-  
-  
-
+  :hover {
+    scale: 0.97;
+    cursor: pointer;
+    transition: all 350ms;
+    background-color: #063971;
+    border: 1px solid white;
+    color: #fff;
+  }
 `;
 
 const Wrapper = styled.div`

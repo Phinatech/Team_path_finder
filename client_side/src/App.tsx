@@ -1,16 +1,18 @@
-import React from "react";
-import ReduxState from "./Components/Reduxfile/ReduxState";
-import "./App.css";
-import Alloutes from "./Components/AllRoutes/Alloutes";
-import Admindashboard from "./Components/AllRoutes/AdminDashBoard";
-import UserDashBoard from "./Components/AllRoutes/UserDashBoard";
-import { useAppSelector } from "./Components/Reduxfile/Store";
-// import { useSelector } from "react-redux";
-
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import AllRoute from './components/AllRoutes/allRoutes';
+import Holder from './components/User/Holder/Holder';
+import UserRoute from './components/AllRoutes/userRoutes';
+import AdminHolder from './components/Admin/AdminHolder/adminHolder';
 function App() {
+  const user = true;
   return (
     <div className="App">
-      <Alloutes />
+     <AllRoute/>
+     {
+     user === true ?  <Holder/> :  <AdminHolder/>
+     }
     </div>
   );
 }
