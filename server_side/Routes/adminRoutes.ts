@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {RegisterAdmin,LoginAdmin,getAllHistory} from "./Controller/adminContoller";
+import {RegisterAdmin,LoginAdmin,getAllHistory} from "../Controller/adminContoller";
 
 const route = Router();
 

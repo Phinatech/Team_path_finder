@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import { IHistory } from "./AllInterface/Allinterface"
+import { IHistory } from "../AllInterface/Allinterface"
 
 interface MainData extends IHistory,mongoose.Document{}
 const historySchema= new mongoose.Schema<IHistory>({
