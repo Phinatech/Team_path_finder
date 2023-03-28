@@ -17,18 +17,17 @@ const Build = () => {
               4 ways to build <br /> your savings
             </span>
             <p>
-              Earn 5%-15% when you save with any <br /> of these PiggyVest
-              plans.
+            Save with Alajo Online Today. <br /> Sign up to be a profitable Alajo agent <br /> and experience saving at its best.
             </p>
-            <NavLink to="/register">
+            <NavLink to="/signup">
               <Button>Start Saving</Button>
             </NavLink>
           </First>
           <Second>
             <CardProps
-              text1="Automated Savings"
+              text1="Daily Savings"
               text2="Build a dedicated savings faster on your terms automatically or manually"
-              ButtonText="PiggyBank"
+              ButtonText="Daily Save"
               image={piggy}
               bcc="#E4F0FD"
               color="blue"
@@ -42,17 +41,17 @@ const Build = () => {
               color="#58A9FD"
             />
             <CardProps
-              text1="Goal-oriented Savings"
+              text1="Alajo Online"
               text2="Reach all your savings goals faster. Save towards multiple goals on your own or with a group."
-              ButtonText="Target Savings"
+              ButtonText="Alajo Savings"
               image={target}
               bcc="#E7FDF0"
               color="#34AC62"
             />
             <CardProps
-              text1="Flexible Savings"
+              text1="Contributions "
               text2="Save, transfer, withdraw, manage and organise your money for free at any time."
-              ButtonText="Flex Naira"
+              ButtonText="Daily Contributions"
               image={flex}
               bcc="#FBE9F5"
               color="#E850A1"
@@ -111,7 +110,7 @@ const First = styled.div`
 
   span {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 45px;
 
     @media screen and (max-width: 500px) {
       text-align: center;

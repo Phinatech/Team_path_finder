@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link, NavLink } from 'react-router-dom'
 import appleIcon from "../Assets/apple-icon.svg"
 import googleIcon from "../Assets/google-icon.svg"
-import hero from "../Assets/img10.svg"
+import hero from "../Assets/jud1.png"
 
 const Hero = () => {
   return (
@@ -18,13 +18,13 @@ const Hero = () => {
             The Better Way  <br /> to Save & Invest.
             </Title>
             <Sub>
-            Alajo helps over 4 million customers achieve their financial
+            Made for traders, merchants, fast-growing businesses and anyone
             <br />
-             goals by helping them save and invest with ease.
+            looking for a smarter and better way to save
              <br />
              We are using mobile technology and agency banking to improve cash flow, eliminate errors  and increase profit for our users
             </Sub>
-       <NavLink to="/register">
+       <NavLink to="/signup">
        <Button>
               Create Free Account
             </Button>
@@ -55,8 +55,9 @@ export default Hero
 
 const Pic = styled.img`
 width: 90%;
-height: 80%;
-object-fit: cover;
+height: 70%;
+object-fit: contain;
+/* background-color: red; */
 
 @media screen and (max-width:500px) {
   width: 300px;
@@ -122,15 +123,15 @@ transition: all 400ms;
 `
 
 const Button = styled.button`
-width: 180px;
-    height: 40px;
+    width: 190px;
+    height: 42px;
     border: none;
     border-radius: 30px;
+    background-color: #063971;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
     margin-right: 20px;
-    background-color: #031e3b;
 
     :hover {
       scale: 0.97;
@@ -200,7 +201,7 @@ font-weight: 800;
 line-height: 82.42px;
 color:#031e3b;
 background-color: rgba(0,0,0,0);
-font-size: 65px;
+font-size: 60px;
 vertical-align: baseline;
 text-align: start;
 font-style: normal;

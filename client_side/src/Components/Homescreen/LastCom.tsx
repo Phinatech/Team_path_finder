@@ -15,11 +15,10 @@ const LastCom = () => {
             <H3> Let's Start Today</H3>
             <H1>Stay Connected With the Right Source That all you need.</H1>
             <P>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            We want the unbanked and underbanked population in Nigeria, to experience financial opportunities and convenience.{" "} Soon to be on Android and iOS!!
             </P>
             <Btn>
-              <NavLink to="/register">
+              <NavLink to="/signup">
                 <Button>Get started Now</Button>
               </NavLink>
             </Btn>

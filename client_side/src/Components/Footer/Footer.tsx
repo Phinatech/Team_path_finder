@@ -25,7 +25,6 @@ const Footer = () => {
             <Navs>Savings</Navs>
             <Navs>School Fees</Navs>
             <Navs>Daily Svings</Navs>
-            <Navs>Daily Contributions</Navs>
             <Navs>Alajo Online</Navs>
             <Navs>Local Market</Navs>
             <Navs>Enterprise</Navs>
@@ -33,9 +32,13 @@ const Footer = () => {
           <Start>
             <Up>
               <Bold>Company</Bold>
-              <Navs>Valerian Adimike</Navs>
+        <NavLink to="https://github.com/Dc-Valerian"   style={{ textDecoration: "none" }}>
+        <Navs>Valerian Adimike</Navs>
+        </NavLink>
               <Navs>Jaji Yusuf</Navs>
-              <Navs>Judith Chinecherem </Navs>
+             <NavLink to="https://github.com/Phinatech"  style={{ textDecoration: "none" }} >
+             <Navs>Judith Chinecherem </Navs>
+             </NavLink>
             </Up>
             <Dow>
               <Bold>Security and terms</Bold>
@@ -149,6 +152,7 @@ const Bold = styled.h2`
   color: rgb(78, 78, 78);
   margin: 0;
   font-weight: 600;
+  text-align: start;
   padding-bottom: 10px;
 `;
 const Start = styled.div`
@@ -157,6 +161,8 @@ const Start = styled.div`
   /* background-color: yellow; */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   /* margin-right: 40px; */
   @media screen and (max-width: 410px) {
     margin-bottom: 15px;
