@@ -161,11 +161,12 @@ const Start = styled.div`
   /* background-color: yellow; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   /* margin-right: 40px; */
-  @media screen and (max-width: 410px) {
+  @media screen and (max-width: 500px) {
     margin-bottom: 15px;
+    flex: auto;
   }
 `;
 const Right = styled.div`
@@ -221,7 +222,6 @@ const Container = styled.div`
 
   @media screen and (max-width: 500px) {
     margin-top: -30%;
-    background-color: aquamarine;
   }
   @media screen and (max-width: 768px) {
     margin-top: 200px;

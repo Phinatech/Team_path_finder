@@ -34,7 +34,10 @@ const Hero = () => {
 
 export default Hero;
 
-const Button = styled.div``;
+const Button = styled.div`
+
+
+`;
 
 const Text = styled.div`
   display: flex;
@@ -48,6 +51,10 @@ const Text = styled.div`
   background-size: 0 100%;
   :hover {
     background-size: 100% 100%;
+  }
+
+  @media screen and (max-width:500px) {
+    display: none;
   }
 `;
 
@@ -65,8 +72,9 @@ const Right = styled.div`
     margin: 0;
   }
 
-  @media screen and (max-width: 770px) {
+  @media screen and (max-width: 500px) {
     width: 90%;
+
   }
 `;
 
@@ -76,15 +84,16 @@ const H1 = styled.div`
   font-size: 19px;
   font-weight: 200;
   margin-right: 150px;
-  @media screen and (max-width: 350px) {
-    font-weight: 500;
-    font-size: 30px;
+  @media screen and (max-width: 500px) {
+    font-weight: 400;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
   }
 `;
 const H3 = styled.div`
   font-size: 20px;
   margin-bottom: 20px;
-
   font-weight: 700;
   line-height: 74px;
   color: white;
@@ -93,6 +102,16 @@ const H3 = styled.div`
   vertical-align: baseline;
   text-align: start;
   font-style: normal;
+
+  @media screen and (max-width:500px) {
+    font-size: 40px;
+    font-weight: 700;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+
+  }
+
 `;
 
 const Img = styled.img`
@@ -109,7 +128,12 @@ const Left = styled.div`
   margin-right: 60px;
 
   @media screen and (max-width: 770px) {
-    width: 70%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    display: none;
   }
 `;
 
@@ -118,6 +142,13 @@ const Btn = styled.div`
   display: flex;
 
   align-items: center;
+
+  @media screen and (max-width:500px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 40px;
+    }
 
   button {
     width: 170px;
@@ -137,6 +168,9 @@ const Btn = styled.div`
       border: 1px solid white;
       color: #fff;
     }
+
+ 
+ 
   }
 `;
 
@@ -157,4 +191,8 @@ const Container = styled.div`
 
   background-color: #031e3b;
   border-bottom-right-radius: 300px;
+
+  /* @media screen and (max-width:500px) {
+    background-color: red;
+  } */
 `;

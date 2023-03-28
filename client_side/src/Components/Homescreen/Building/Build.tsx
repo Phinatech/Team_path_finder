@@ -14,7 +14,7 @@ const Build = () => {
         <Wrapper>
           <First>
             <span>
-              4 ways to build <br /> your savings
+              4 Ways to Build <br /> Your Savings
             </span>
             <p>
             Save with Alajo Online Today. <br /> Sign up to be a profitable Alajo agent <br /> and experience saving at its best.
@@ -114,9 +114,8 @@ const First = styled.div`
 
     @media screen and (max-width: 500px) {
       text-align: center;
-      font-size: 28px;
-      font-family: U8-Bold;
-      line-height: 38px;
+      font-size: 39px;
+      line-height: 45px;
       vertical-align: baseline;
       letter-spacing: normal;
       word-spacing: 0px;
@@ -134,10 +133,9 @@ const First = styled.div`
 
     @media screen and (max-width: 500px) {
       text-align: center;
-      font-family: "DM Sans";
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 400;
-      line-height: 27.2px;
+      line-height: 25px;
       vertical-align: baseline;
       letter-spacing: normal;
       font-style: normal;
@@ -170,11 +168,13 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 120px;
-  margin-bottom: 20px;
+overflow: hidden;
+
+  /* margin-top: 100px; */
+  /* margin-bottom: 20px; */
 
   @media screen and (max-width: 500px) {
-    margin-top: 50px;
+    margin-top: -220%;
   }
 
   @media screen and (max-width: 768px) {

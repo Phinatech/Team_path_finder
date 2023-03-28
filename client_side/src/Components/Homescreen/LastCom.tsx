@@ -18,7 +18,7 @@ const LastCom = () => {
             We want the unbanked and underbanked population in Nigeria, to experience financial opportunities and convenience.{" "} Soon to be on Android and iOS!!
             </P>
             <Btn>
-              <NavLink to="/signup">
+              <NavLink to="/signup" style={{textDecoration:"none"}}>
                 <Button>Get started Now</Button>
               </NavLink>
             </Btn>
@@ -54,19 +54,28 @@ const H1 = styled.div`
   font-weight: bold;
 
   @media screen and (max-width: 350px) {
-    font-weight: 500;
-    font-size: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
   }
 `;
 const H3 = styled.div`
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 20px;
+
+  @media screen and (max-width:500px) {
+    font-size: 35px;
+  }
 `;
 
 const P = styled.div`
   margin: 0;
   margin-bottom: 10px;
+
+  @media screen and (max-width:500px) {
+    font-size: 13px;
+  }
 `;
 
 const Left = styled.div`
@@ -128,5 +137,6 @@ const Container = styled.div`
   background-color: #031e3b;
   border-bottom-left-radius: 100px;
   border-top-right-radius: 100px;
+  overflow: hidden;
   /* margin-top: 20px; */
 `;

@@ -246,9 +246,9 @@ const Div = styled.div`
 const Handbuggermenu = styled.div`
   position: absolute;
   padding-top: 20px;
-  top: 53px;
+  top: 80px;
   width: 100%;
-  background-color: #030614;
+  background-color: #031e3b;
   display: none;
   z-index: 9999;
   @media screen and (min-width: 300px) and (max-width: 500px) {
