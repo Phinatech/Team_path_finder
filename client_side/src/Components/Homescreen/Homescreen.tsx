@@ -10,8 +10,9 @@ const Homescreen = () => {
   return (
     <div>
       <Header />
+      {/* <br /> */}
       <Hero />
-      <Better />
+      <Better /> 
       <Build />
       <LastCom />
       <Footer />

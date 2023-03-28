@@ -24,8 +24,8 @@ const Hero = () => {
              <br />
              We are using mobile technology and agency banking to improve cash flow, eliminate errors  and increase profit for our users
             </Sub>
-       <NavLink to="/signup">
-       <Button>
+       <NavLink to="/signup" style={{textDecoration:"none"}} >
+       <Button >
               Create Free Account
             </Button>
        </NavLink>
@@ -63,7 +63,7 @@ object-fit: contain;
   width: 300px;
   height:400px; 
    margin-bottom: 250px;
-
+   display: none;
 }
 `
 
@@ -127,7 +127,7 @@ const Button = styled.button`
     height: 42px;
     border: none;
     border-radius: 30px;
-    background-color: #063971;
+    background-color: #031e3b;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
@@ -184,14 +184,13 @@ line-height: 27.2px;
 @media screen and (max-width:500px) {
   background-color: rgba(0,0,0,0);
   color: rgb(53,53,53);
-  font-family: "DM Sans";
   font-size: 18px;
-  line-height: 27.2px;
-  vertical-align: baseline;
+  line-height: 27px;
   letter-spacing: normal;
-  word-spacing: 0px;
   font-weight: 400;
-  text-align: center;
+  display: flex;
+  /* text-align: center; */
+  /* align-items: center; */
 }
 `
 
@@ -207,15 +206,12 @@ text-align: start;
 font-style: normal;
 
 @media screen and (max-width:500px) {
-  font-family: U8-Bold;
-  font-size: 43px;
-  line-height: 57px;
-  vertical-align: baseline;
+  font-size: 35px;
+  line-height: 50px;
   letter-spacing: normal;
   word-spacing: 1px;
   font-weight: 700;
 text-align: center;
-  text-transform: none;
 }
 `
 
@@ -224,6 +220,13 @@ const First = styled.div`
 display: flex;
 flex-direction: column;
 margin-left: 40px;
+
+@media screen and (max-width:500px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+}
 `
 
 const Wrapper = styled.div`
@@ -237,7 +240,10 @@ margin-top: 90px;
 
 @media screen and (max-width:500px) {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+
 }
 `
 
@@ -248,4 +254,6 @@ align-items: center;
 width: 100%;
 margin-top: 20px;
 /* background-color: red; */
+overflow: hidden;
+
 `

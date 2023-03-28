@@ -92,7 +92,7 @@ console.log(UsersSignUp)
 
             <Button type="submit">Sign In</Button>
 
-            <NavLink to="/register" style={{ textDecoration: "none" }}>
+            <NavLink to="/signin" style={{ textDecoration: "none" }}>
               <Already>Already have an account? Sign in</Already>
             </NavLink>
           </Form>
@@ -108,11 +108,20 @@ const Image = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+
+    @media screen and (max-width:500px) {
+    width: 90%;
+  }
 `;
 
 const Img = styled.img`
   width: 40%;
   object-fit: cover;
+  
+
+  @media screen and (max-width:500px) {
+    width: 50%;
+  }
 `;
 
 const Text = styled.div`
@@ -170,6 +179,11 @@ const Form = styled.form`
   padding: 30px;
   padding-right: 40px;
   margin-top: 40px;
+
+
+  @media screen and (max-width:500px) {
+    width: 200px;
+  }
 `;
 
 const Left = styled.div`
