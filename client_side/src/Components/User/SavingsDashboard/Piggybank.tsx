@@ -7,36 +7,36 @@ import Pigbox from "./Pigbox";
 
 const Piggybank = () => {
   return (
-      <Container>
-        <Wrapper>
-          <Top>
-            <Left>
-              <Bold>
-                <h1>Savings...</h1>
-              </Bold>
-            </Left>
-            <Right>
-              <Img src={img} />
-            </Right>
-          </Top>
-          <Bottom>
-            <NavLink to="/usersavings" style={{ textDecoration: "none" }}>
-              <Navs>Savings</Navs>
-            </NavLink>
-            <NavLink to="/backtoschool" style={{ textDecoration: "none" }}>
-              <Navs2>BackToSchool</Navs2>
-            </NavLink>
-            <NavLink to="/withdraw" style={{ textDecoration: "none" }}>
-              <Navs2>Withdraw</Navs2>
-            </NavLink>
-            <NavLink to="/deposit" style={{ textDecoration: "none" }}>
-              <Navs2>Deposit</Navs2>
-            </NavLink>
-            <Navs2>Flex Dollar</Navs2>
-          </Bottom>
-          <Pigbox />
-        </Wrapper>
-      </Container>
+    <Container>
+      <Wrapper>
+        <Top>
+          <Left>
+            <Bold>
+              <h1>Savings...</h1>
+            </Bold>
+          </Left>
+          <Right>
+            <Img src={img} />
+          </Right>
+        </Top>
+        <Bottom>
+          <NavLink to="/usersavings" style={{ textDecoration: "none" }}>
+            <Navs>Savings</Navs>
+          </NavLink>
+          <NavLink to="/backtoschool" style={{ textDecoration: "none" }}>
+            <Navs2>BackToSchool</Navs2>
+          </NavLink>
+          <NavLink to="/withdraw" style={{ textDecoration: "none" }}>
+            <Navs2>Withdraw</Navs2>
+          </NavLink>
+          <NavLink to="/deposit" style={{ textDecoration: "none" }}>
+            <Navs2>Deposit</Navs2>
+          </NavLink>
+          <Navs2>Flex Dollar</Navs2>
+        </Bottom>
+        <Pigbox />
+      </Wrapper>
+    </Container>
   );
 };
 

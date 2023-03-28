@@ -241,5 +241,5 @@ const Container = styled.div`
   margin-top: 45px;
   justify-content: space-between;
   margin-bottom: 45px;
-  background-color: red;
+  /* background-color: red; */
 `;

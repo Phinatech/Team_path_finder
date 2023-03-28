@@ -20,9 +20,12 @@ import axios from "axios";
 import Swal from "sweetalert2";
 const Cards = () => {
   const user = useAppSelector((state) => state.currentUser);
+
+  const id = user?._id;
+
   const cash = useAppSelector((state) => state.wallet);
 
-  console.log("here oo", user);
+  // console.log("here oo", user);
 
   const fetchUser = useQuery({
     queryKey: ["user"],
@@ -58,13 +61,13 @@ const Cards = () => {
   //   To sign up users:
   const School = useMutation({
     mutationFn: (data) => {
-      return createBackToSchool(user?._id, data);
+      return createBackToSchool(id!, data!);
     },
   });
-  console.log("lala", School);
+  // console.log("lala", School);
   const onSubmit = handleSubmit(async (data) => {
     await axios
-      .patch(`${localUrl}/api/update/${user?._id}`, { data })
+      .patch(`${localUrl}/api/update/${id}`, { data })
       .then((res) => {
         Swal.fire({
           title: "succeful",
@@ -77,7 +80,7 @@ const Cards = () => {
           icon: "error",
           text: `${err.response?.data?.message}`,
         });
-        console.log(err.response);
+        // console.log(err.response);
       });
   });
 
