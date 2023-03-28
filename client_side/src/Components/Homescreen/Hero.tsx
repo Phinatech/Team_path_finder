@@ -10,9 +10,9 @@ const Hero = () => {
         <Wrapper>
           <Right>
             <H3> Let's Start Alajo Savings Today!!</H3>
-            <H1>A Smart Solution for Traditional Savings and Credit</H1>
+            <H1>A Smart Savings Solution For Unbanked and Non-Smart Phone Users.</H1>
             <Btn>
-              <NavLink to="/register">
+              <NavLink to="/signup">
                 <Button>
                   <button>Get started Now</button>
                 </Button>
@@ -73,7 +73,7 @@ const Right = styled.div`
 const H1 = styled.div`
   line-height: 1.1;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 200;
   margin-right: 150px;
   @media screen and (max-width: 350px) {
