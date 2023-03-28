@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Hero = () => {
   return (
     <div>
-      <Container>
+      <Container id="home">
         <Wrapper>
           <Right>
             <H3> Let's Start Alajo Savings Today!!</H3>
@@ -56,6 +56,7 @@ const Icons = styled.div`
 `;
 const Right = styled.div`
   width: 50%;
+  flex-direction: column;
 
   padding: 20px;
   color: #fff;
@@ -74,6 +75,7 @@ const H1 = styled.div`
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 200;
+  margin-right: 150px;
   @media screen and (max-width: 350px) {
     font-weight: 500;
     font-size: 30px;

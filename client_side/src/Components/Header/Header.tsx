@@ -2,14 +2,15 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import logo from "../Assets/logo7.png"
-// import GlobalButton from "../GlobalProps/GlobalButton"
 import { BiMenuAltRight } from "react-icons/bi";
+import { Link } from "react-scroll"
+
 
 
 const Header = () => {
   const [media, setmedia] = React.useState<boolean>(false);
   const [landingsearch, setlandsearch] = React.useState<boolean>(false);
-
+  const [show, setShow] = React.useState(false);
 
 
   const hb = () => {
@@ -20,30 +21,69 @@ const Header = () => {
     setmedia(false);
     setlandsearch(false);
   };
+
+  const changeHeader = () =>{
+    if(window.scrollY >= 70 ){
+      setShow(true);
+    }else{
+      setShow(false)
+    }
+  }
+
+  window.addEventListener("scroll",changeHeader)
+
   return (
     <div>
       <Container>
-        <Wrapper>
-        <NavLink to="/">
-        <Logo src={logo}/>
-        </NavLink>
 
-          <NavWrapper>
-            <Nav to="">Home</Nav>
-            <Nav to="">Invest</Nav>
-            <Nav to="">Save</Nav>
-            <Nav to="">Source</Nav>
-          </NavWrapper>
+        {
+          show ? (
+            <Wrapper bg=''>
+            <NavLink to="/">
+            <Logo src={logo}/>
+            </NavLink>
+    
+              <NavWrapper>
+                <Nav smooth={true} duration={500} to="home" >Home</Nav>
+                <Nav smooth={true} duration={500} to="better" >Save</Nav>
+                <Nav smooth={true} duration={500} to="build" >Plan</Nav>
+                <Nav smooth={true} duration={500}  to="source">Source</Nav>
+              </NavWrapper>
+    
+              <Buttonwrapper>
+            <NavLink to="/signin">
+                <Button>Login</Button>
+              </NavLink>  
+            <NavLink to="/signup">
+                <Button>Sign Up</Button>
+              </NavLink>  
+               </Buttonwrapper>
+            </Wrapper>
+          ) : (
+            <Wrapper bg=''>
+            <NavLink to="/">
+            <Logo src={logo}/>
+            </NavLink>
+    
+              <NavWrapper>
+              <Nav smooth={true} duration={500} to="home" >Home</Nav>
+                <Nav smooth={true} duration={500} to="better" >Save</Nav>
+                <Nav smooth={true} duration={500} to="build" >Plan</Nav>
+                <Nav smooth={true} duration={500}  to="source">Source</Nav>
+              </NavWrapper>
+    
+              <Buttonwrapper>
+            <NavLink to="/signin">
+                <Button>Login</Button>
+              </NavLink>  
+            <NavLink to="/signup">
+                <Button>Sign Up</Button>
+              </NavLink>  
+               </Buttonwrapper>
+            </Wrapper>
+          )
+        }
 
-          <Buttonwrapper>
-        <NavLink to="/signin">
-            <Button>Login</Button>
-          </NavLink>  
-        <NavLink to="/signup">
-            <Button>Sign Up</Button>
-          </NavLink>  
-           </Buttonwrapper>
-        </Wrapper>
         {media ? (
             <Span onClick={remove}>X</Span>
           ) : (
@@ -52,23 +92,26 @@ const Header = () => {
             </Menu>
           )}
         {media ? (
-          <Handbuggermenu>
-            <Div>
-              <span>Home</span>
-            </Div>
-
-            <Div>
-              <span>Invest</span>
-            </Div>
-            <Div>
-              <span>Save</span>
-            </Div>
-            <Div>
-              <span>Source</span>
-            </Div>
-          </Handbuggermenu>
-        ) : null}
-
+        <Handbuggermenu>
+          <Div>
+            <span>Home</span>
+            
+          </Div>
+       
+          <Div>
+            <span>Save</span>
+         
+          </Div>
+          <Div>
+            <span>Plan</span>
+          </Div>
+          <Div>
+            <span>Source</span>
+          </Div>
+       
+          
+        </Handbuggermenu>
+      ) : null}
       </Container>
     </div>
   )
@@ -230,7 +273,7 @@ const Buttonwrapper = styled.div`
   }
 `
 
-const Nav = styled(NavLink)`
+const Nav = styled(Link)`
 text-decoration: none;
 display: flex;
 justify-content: center;
@@ -238,16 +281,13 @@ align-items: center;
 margin: 30px;
   color: white;
   cursor: pointer;
-
   :hover{
-    border-bottom: 1px solid #2A1854;
-    color: #2A1854;
+    border-bottom: 1px solid #fff;
 }
 @media screen and (max-width: 768px) {
   /* display: none; */
 }
 `
-
 
 const NavWrapper = styled.div`
 display: flex;
@@ -274,13 +314,13 @@ object-fit: cover;
 `
 
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{bg:string}>`
 display: flex;
 align-items: center;
 width: 90%;
 height: 100%;
 justify-content: space-evenly;
-/* background-color: red; */
+background-color: ${(props) => props.bg};
 position: relative;
 `
 
@@ -297,5 +337,5 @@ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 
 display: flex;
 justify-content: space-evenly;
 /* border-bottom: 1px whitesmoke; */
-/* align-items: center; */
+/* align-items: center; */
 `

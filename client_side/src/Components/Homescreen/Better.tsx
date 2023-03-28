@@ -8,7 +8,7 @@ import hero from "../Assets/img10.svg"
 const Hero = () => {
   return (
     <div>
-      <Container>
+      <Container id='better'>
         <Wrapper>
         <Second>
            <Pic src={hero}/>
